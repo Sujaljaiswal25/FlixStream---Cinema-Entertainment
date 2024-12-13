@@ -1,0 +1,89 @@
+
+@tailwind base; 
+@tailwind components;
+@tailwind utilities;
+
+/* primary = #1F1E24 */
+/* secondry = #1d7437 */
+/* New color = #1d7437 */
+
+::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+}
+
+
+
+::-webkit-scrollbar-thumb{
+    background: #1F1E24;
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover{
+    background: #1d7437;
+    border-radius: 10px;
+}
+*{
+    user-select: none;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #27272a;
+    background-image: none;
+    flex: 1;
+    padding: 0 0.50rem;
+    color: #ffffffc9;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: "Open Sans", sans-serif;
+}
+
+select::-ms-expand{
+    display: none;
+}
+
+.select{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 13rem;
+    height: 2rem;
+    line-height: 3;
+    background: #27272a;
+    overflow: hidden;
+    border-radius: 2rem;    
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    top: 1;
+    right: 0;
+    padding: 0 1em;
+    background: #5c5c5e;
+    cursor: pointer;
+    pointer-events: none;
+    transition: 0.25s all ease;
+}
+
+.select:hover::after{
+    color: #1d7437;
+}
+
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Optional: Apply smooth scrolling to the specific scrollable div */
+  #scrollableDiv {
+    scroll-behavior: smooth;
+  }
